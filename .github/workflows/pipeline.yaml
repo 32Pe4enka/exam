@@ -16,7 +16,7 @@ jobs:
       - name: Setup .NET
         uses: microsoft/setup-msbuild@v1
         with:
-          dotnet-version: '4.x'
+          dotnet-version: '4.8'
 
       - name: Build solution
         run: dotnet build —configuration Release
