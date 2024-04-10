@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Главная Страница";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@model IEnumerable<WorkKom.Models.Billet>
+@{
+    ViewBag.Title = "Все расчётные рейсы";
+}
+<a asp-action="Create">Добавить данные о рейсах</a>
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>| @item.BillDv</td>
+            <td>
+                <label asp-for="@item.IdB" class="control-label">Дата вылета</label> |
+            </td>
+
+            <td>| @item.BillDp</td>
+            <td>
+                <label asp-for="@item.IdB" class="control-label">Дата прибытия</label> |
+            </td>
+
+            <td>| @item.NomerM</td>
+            <td>
+                <label asp-for="@item.IdB" class="control-label">Номер места</label> |
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.IdB">Изменить</a> |
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.IdB">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@*tr - контейнер для создания строки таблицы Каждая ячейка в пределах такой строки может задаваться с помощью тега <th> или <td>*@
+@*foreach - цикл позволяющий последовательно перебрать все элементы массива*@
+@*IEnumerable - элемент интерфейса для реализации перечисления*@
+@*model - модуль описывающий, какой тип информации следует ожидать внутри элемента или какие элементы могут быть вложены в другие элементы*@
+@*p - абзац*@
+@*h - заголовки, от 1 до 6*@
+@*a - тег для создания ссылок*@

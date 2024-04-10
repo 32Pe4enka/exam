@@ -1,0 +1,38 @@
+﻿@model WorkKom.Models.Billet
+@{
+    ViewData["Title"] = "Удаление";
+}
+
+<div>
+    <dl class=" dl-horizontal">
+        <dt>"Дата вылета"</dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillDv) @*DisplayFor строго типизированный аналог*@
+        </dd>
+
+        <dt>"Дата прибытия"</dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillDp) @*DisplayFor строго типизированный аналог*@
+        </dd>
+
+        <dt>"Место в Самолёте"</dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomerM) @*DisplayFor строго типизированный аналог*@
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-asp-controller="Home" asp-action="Delete" method="post">
+            <div class=" form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@*Active Server Pages -активные серверные страницы*@
+@*asp-controller реагирование на запрос пользователя | asp-action указание на действие контроллера*@
+@*dt - элемент выделения термина в описанни или в списке определений*@
+@*dl - элемент представляющий собой список описаний, проще говоря, элемент выступающий чаще всего в связке с dt*@
+@*dd - элемент предоставления дополнительной информации об определении с элементом dt*@
+@*div - универсальный контейнер разделения контента*@

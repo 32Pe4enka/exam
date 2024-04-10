@@ -1,0 +1,24 @@
+﻿@model WorkKom.Models.Billet
+@{
+    ViewBag.Title = "Добавление информации";
+}
+<form asp-action="Create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="BillDv" class="control-label">Дата вылета</label>
+        <input type="text" asp-for="BillDv" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BillDp" class="control-label">Дата прибытия</label>
+        <input type="text" asp-for="BillDp" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NomerM" class="control-label">Место в самолёте</label>
+        <input type="text" asp-for="NomerM" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Сохранить информацию" class="btn btn-default" />
+    </div>
+</form>
