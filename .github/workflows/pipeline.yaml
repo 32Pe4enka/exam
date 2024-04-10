@@ -19,4 +19,4 @@ jobs:
           dotnet-version: '4.8'
 
       - name: Build solution
-        run: dotnet build —configuration Release
+        run: msbuild WorkKom.sln
