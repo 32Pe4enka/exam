@@ -18,5 +18,8 @@ jobs:
         with:
           dotnet-version: '4.8'
 
+      - name: Restore dependencies
+        run: nuget restore
+        
       - name: Build solution
         run: msbuild WorkKom.sln
