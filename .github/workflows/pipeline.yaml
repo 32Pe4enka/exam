@@ -3,7 +3,7 @@ name: ASP.NET Build Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
